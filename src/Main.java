@@ -127,12 +127,17 @@ public class Main {
         int densMonthlyIncrease = (densMonthlyWage * 10)/100;
         int krisMonthlyIncrease = (krisMonthlyWage * 10)/100;
 
+        //Monthly wage + 10% for each employee
+        int mashaMonthlyWageIncreased = mashaMonthlyWage + mashaMonthlyIncrease;
+        int densMonthlyWageIncreased = densMonthlyWage + densMonthlyIncrease;
+        int krisMonthlyWageIncreased = krisMonthlyWage + krisMonthlyIncrease;
+
         //Yearly wage for each employee
         int mashaYearlyWage = mashaMonthlyWage*12;
         int densYearlyWage = densMonthlyWage*12;
         int krisYearlyWage = krisMonthlyWage*12;
 
-        //Yearly wage + 10% monthly for each employee
+        //Yearly wage + 10% for each employee
         int mashaYearlyWageIncreased = (mashaMonthlyWage+mashaMonthlyIncrease)*12;
         int densYearlyWageIncreased = (densMonthlyWage+densMonthlyIncrease)*12;
         int krisYearlyWageIncreased = (krisMonthlyWage+krisMonthlyIncrease)*12;
@@ -142,16 +147,11 @@ public class Main {
         int densWageDifference = densYearlyWageIncreased - densYearlyWage;
         int krisWageDifference = krisYearlyWageIncreased - krisYearlyWage;
 
-        System.out.println(mashaYearlyWage);
-        System.out.println(mashaMonthlyIncrease);
-        System.out.println(mashaYearlyWageIncreased);
-
-
-        System.out.println("Маша теперь получает "+mashaYearlyWageIncreased+" рублей. " +
+        System.out.println("Маша теперь получает "+mashaMonthlyWageIncreased+" рублей. " +
                 "Годовой доход вырос на "+mashaWageDifference+" рублей");
-        System.out.println("Денис теперь получает "+densYearlyWageIncreased+" рублей. " +
+        System.out.println("Денис теперь получает "+densMonthlyWageIncreased+" рублей. " +
                 "Годовой доход вырос на "+densWageDifference+" рублей");
-        System.out.println("Кристина теперь получает "+krisYearlyWageIncreased+" рублей. " +
+        System.out.println("Кристина теперь получает "+krisMonthlyWageIncreased+" рублей. " +
                 "Годовой доход вырос на "+krisWageDifference+" рублей");
 
     }
